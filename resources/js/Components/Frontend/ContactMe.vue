@@ -1,4 +1,39 @@
-<script setup></script>
+<script setup>
+    import {
+        ref
+    } from 'vue';
+    import {
+        useForm
+    } from '@inertiajs/vue3';
+
+    const showMessagge =ref(false);
+
+    const form = useForm({
+        name: "",
+        email: "",
+        body: ""
+    });
+
+    function setShowMessage(value){
+        showMessagge.value=value;
+    }
+
+    function cleanForm(){
+        form.reset();
+        setShowMessage(true)
+        setTimeout(()=>setShowMessage(false),2000)
+
+    }
+    const submit = () => {
+        form.post(route('contact'), {
+            onSuccess: () => cleanForm(),
+            preserveScroll: true,
+            onError: () => {
+                console.log(form.errors);
+            }
+        });
+    };
+</script>
 
 <template>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -64,14 +99,38 @@
                         </div>
                     </div>
                 </div>
-                <form class="space-y-8 w-full max-w-md">
+                <form @submit.prevent="submit" class="space-y-8 w-full max-w-md">
+                    <div v-if="showMessagge"
+                     class="m-2 p-4 bg-green-500 dark:bg-green-600 text-white dark:text-gray-100 rounded-lg">
+                     Gracias por contactarme.
+                     </div>
+
                     <div class="flex flex-col space-y-4">
-                        <input type="text" placeholder="Tu nombre"
-                            class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-4">
-                        <input type="email" placeholder="Tu correo electrónico"
-                            class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-4">
-                        <textarea placeholder="Tu mensaje"
-                            class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-4 h-32"></textarea>
+                        <!-- Campo Nombre -->
+                        <div>
+                            <input v-model="form.name" type="text" placeholder="Tu nombre"
+                                class="w-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-4">
+                            <!-- Mostrar el mensaje de error si existe -->
+                            <p v-if="form.errors.name" class="text-red-500 text-sm mt-1">{{ form . errors . name }}</p>
+                        </div>
+
+                        <!-- Campo Correo -->
+                        <div>
+                            <input v-model="form.email" type="email" placeholder="Tu correo electrónico"
+                                class="w-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-4">
+                            <!-- Mostrar el mensaje de error si existe -->
+                            <p v-if="form.errors.email" class="text-red-500 text-sm mt-1">{{ form . errors . email }}</p>
+                        </div>
+
+                        <!-- Campo Mensaje -->
+                        <div>
+                            <textarea v-model="form.body" placeholder="Tu mensaje"
+                                class="w-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-4 h-32"></textarea>
+                            <!-- Mostrar el mensaje de error si existe -->
+                            <p v-if="form.errors.body" class="text-red-500 text-sm mt-1">{{ form . errors . body }}</p>
+                        </div>
+
+                        <!-- Botón Enviar -->
                         <button type="submit"
                             class="bg-indigo-600 dark:bg-indigo-400 text-white rounded-md py-2 px-4 hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-colors">
                             Enviar
