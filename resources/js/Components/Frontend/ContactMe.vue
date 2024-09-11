@@ -37,7 +37,7 @@
 
 <template>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <section id="portafolio" class="bg-hero-light dark:bg-hero-dark py-32 dark:bg-black">
+    <section id="contact" class="bg-hero-light dark:bg-hero-dark py-32 dark:bg-black">
         <div class="container mx-auto">
             <div class="flex flex-col items-center text-center mb-12">
                 <h2 class="section-title text-indigo-600 dark:text-indigo-300">
@@ -132,9 +132,10 @@
 
                         <!-- Botón Enviar -->
                         <button type="submit"
-                            class="bg-indigo-600 dark:bg-indigo-400 text-white rounded-md py-2 px-4 hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-colors">
-                            Enviar
-                        </button>
+        class="bg-[#1414b8] dark:bg-[#0056b3] text-white rounded-md py-2 px-4 hover:bg-[#0000ff] dark:hover:bg-[#0000ff] transition-colors">
+    Enviar
+</button>
+
                     </div>
                 </form>
             </div>

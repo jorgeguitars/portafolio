@@ -1,6 +1,6 @@
 <script setup>
 import Footer from '@/Components/Frontend/Footer.vue';
-import HeaderLayout from './HeaderLayout.vue';
+import HeaderLayout from '@/Components/Frontend/Header.vue';
 </script>
 <template>
 <div class="bg-slate-200 dark:bg-black">

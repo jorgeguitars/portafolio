@@ -2,12 +2,12 @@
     <div class="bg-light-tail-100 dark:bg-dark-navy-500">
       <div class="w-full py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-8 lg:px-8 bg-[#c7d2fe]">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-black sm:text-4xl">
-          <span class="block">Ready to dive in?</span>
-          <span class="block text-indigo-600">Start your free trial today?</span>
+          <span class="block">¿Listo para una colaboración exitosa?</span>
+          <span class="block text-indigo-600">Empieza tu camino con un clic.</span>
         </h2>
         <div class="mt-8 flex lg:flex-shrink-0">
           <div class="inline-flex rounded-md shadow">
-            <a href="#" class="
+            <a href="#contact" class="
               inline-flex
               items-center
               justify-center
@@ -20,7 +20,7 @@
               font-medium
               text-white
               hover:bg-indigo-700
-            ">Get started</a>
+            ">Contáctame</a>
           </div>
         </div>
       </div>

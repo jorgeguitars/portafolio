@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-    <section class="section dark:border-dark-navy-100 py-12">
+    <section id="services" class="section dark:border-dark-navy-100 py-12">
         <div class="container mx-auto max-w-4xl px-4">
             <!-- Sección de Títulos y Descripción -->
             <div class="flex flex-col items-center text-center mb-12">

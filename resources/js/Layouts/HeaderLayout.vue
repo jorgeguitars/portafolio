@@ -48,7 +48,7 @@ const showMobileMenu = ref(false);
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href=""
                             class="flex items-center py-3 px-5 text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-600 md:p-0 dark:text-white md:dark:hover:text-indigo-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent focus:bg-blue-200 focus:outline-none active:bg-blue-300 relative group transform transition-transform duration-500 hover:rotate-6 hover:scale-105 text-xl md:text-2xl">
                             <span>Contact</span>
                         </a>
