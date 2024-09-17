@@ -40,7 +40,7 @@
     <section id="contact" class="bg-hero-light dark:bg-hero-dark py-32 dark:bg-black">
         <div class="container mx-auto">
             <div class="flex flex-col items-center text-center mb-12">
-                <h2 class="section-title text-indigo-600 dark:text-indigo-300">
+                <h2 class="mb-3 text-4xl lg:text-5xl text-accent text-indigo-600" style="font-family: 'Poppins', sans-serif;">
                     Contáctame
                 </h2>
                 <p class="text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
