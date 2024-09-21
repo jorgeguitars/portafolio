@@ -20,5 +20,8 @@
     "dependencies": {
         "@inertiajs/inertia": "^0.11.1",
         "ziggy": "^2.4.0"
+    },
+    "optionalDependencies": {
+        "@rollup/rollup-linux-x64-gnu": "^4.22.4"
     }
 }
