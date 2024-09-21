@@ -20,6 +20,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': '/resources/js',
+            'ziggy': '/vendor/tightenco/ziggy/dist/vue.m', // Ajusta esta ruta según tu estructura
         },
     },
 });
